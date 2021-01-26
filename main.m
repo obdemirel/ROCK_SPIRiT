@@ -3,6 +3,11 @@
 %% SMS MRI Reconstruction
 %% Author: Omer Burak Demirel
 %% Last Update: 01/25/2021
+%% If you would like to use this code in one of your publications,
+%% please cite the following:
+%%
+%%
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ROCK SPIRiT requires following inputs:
@@ -20,10 +25,11 @@ clear all
 run setPath
 
 %% Loading the data
-load cine_data
-kspace = squeeze(kspace(:,:,:,1));
-%parpool(maxNumCompThreads)
-% parpool(5)
+load cine_data %% File contains kspace,acs,sense_maps and reference_images
+%% reference images are not required
+
+parpool(maxNumCompThreads) %% more is better
+%parpool(4)
 
 %%% This part handles the readout concatenation of the k-space and acs
 [RO_acs,slice_R] = readout_conc_prep(kspace,acs);
@@ -33,7 +39,7 @@ kspace = squeeze(kspace(:,:,:,1));
 
 % ROCK-SPIRIT Reconstruction
 [recon,recon_images] = ROCKSPIRIT(data_kspace,sense_maps,kernel_set,kernel_r,kernel_s,slice_R,45);
-save('recon_images40','recon_images')
+save('recon_images','recon_images')
 
 %% ROCK-SPIRIT Reconstruction with LLR
 [recon_reg,recon_reg_images] = ROCKSPIRIT_reg(data_kspace,sense_maps,kernel_set,kernel_r,kernel_s,slice_R,5,20);
@@ -42,5 +48,6 @@ save('recon_reg_images','recon_reg_images')
 delete(gcp('nocreate'))
 
 %% Results
-dyn = 1;  %% select a dynamic
-result_plotter(dyn,reference_images,recon_images,recon_reg_images)
+dyn = 1;  %% select a dynamics
+ref_check = exist('reference_images');
+result_plotter(dyn,reference_images,recon_images,recon_reg_images,ref_check)
