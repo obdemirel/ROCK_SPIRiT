@@ -6,11 +6,11 @@ Please cite the following:
 
 To run this code, please use main.m
 
-RO:       # of readout lines
-PE:       # of phase encode lines
-NO_C:     # of coil elements
-Slices:   # of slices
-Dynamics: # of cardiac phases
+RO:       # of readout lines,
+PE:       # of phase encode lines,
+NO_C:     # of coil elements,
+Slices:   # of slices,
+Dynamics: # of cardiac phases,
 
 Input data:
 - kspace (RO x PE x NO_C x Dynamics)
