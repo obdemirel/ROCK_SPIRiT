@@ -15,10 +15,12 @@
 %% kspace (RO x PE x NO_C x Dynamics) - R2 undersampled with 24 ACS kept      
 %% acs (RO x PE x NO_C x Slices) with CAIPI shitfs 
 %% sense_maps (RO x PE x NO_C x Slices) with CAIPI shitfs 
+%% reference_images (RO x PE x Slices) with CAIPI shitfs 
 
 %% RO:       # of readout lines
 %% PE:       # of phase encode lines
 %% NO_C:     # of coil elements
+%% Slices:   # of slices
 %% Dynamics: # of cardiac phases
 
 clear all
