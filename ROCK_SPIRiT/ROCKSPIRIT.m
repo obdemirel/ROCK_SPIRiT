@@ -10,7 +10,7 @@ sigma = 1;
 %parpool(maxNumCompThreads)
 % parfor ss=1:size(data_kspace,4)
 parfor ss=1:size(data_kspace,4)
-    disp(['Slice: ',num2str(ss),' in progress'])
+    disp(['Dynamic: ',num2str(ss),' in progress'])
     tic
     
     ksms = (squeeze(data_kspace(:,:,:,ss)));
