@@ -2,7 +2,7 @@
 This is an implementation of ROCK-SPIRIT(Demirel et al 2021).
 
 Please cite the following:
-Demirel, O. B., Weingärtner, S., Moeller, S., Akçakaya, M. Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT (ROCK-SPIRiT). Magnetic resonance in medicine, in press.
+Demirel, O. B., Weingärtner, S., Moeller, S., Akçakaya, M., "Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT (ROCK-SPIRiT)", Magnetic Resonance in Medicine, in press.
 
 To run this code, please use main.m
 
