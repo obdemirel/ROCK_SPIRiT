@@ -2,7 +2,7 @@
 %% Readout Concatenated K-Space SPIRiT (ROCK-SPIRIT) 
 %% SMS MRI Reconstruction
 %% Author: Omer Burak Demirel
-%% Last Update: 01/25/2021
+%% Last Update: 01/28/2021
 %% If you would like to use this code in one of your publications,
 %% please cite the following:
 %% Demirel, O. B., Weingärtner, S., Moeller, S., Akçakaya, M., 
@@ -15,7 +15,6 @@
 %% kspace (RO x PE x NO_C x Dynamics) - R2 undersampled with 24 ACS kept      
 %% acs (RO x PE x NO_C x Slices) with CAIPI shitfs 
 %% sense_maps (RO x PE x NO_C x Slices) with CAIPI shitfs 
-%% reference_images (RO x PE x Slices) with CAIPI shitfs
 
 %% RO:       # of readout lines
 %% PE:       # of phase encode lines
@@ -27,8 +26,7 @@ clear all
 run setPath
 
 %% Loading the data
-load cine_data %% File contains kspace,acs,sense_maps and reference_images
-%% reference images are not required
+load cine_data %% File contains kspace,acs,sense_maps
 
 %parpool(maxNumCompThreads) %% more is better
 %parpool(14)
