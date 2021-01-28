@@ -28,7 +28,13 @@ run setPath
 %% Loading the data
 load cine_data %% File contains kspace,acs,sense_maps
 
-parpool(maxNumCompThreads)
+%Please use parpool when data has dynamics
+%parpool(maxNumCompThreads)
+
+%%% This part generates the ESPIRiT maps using the acs data. Following paper and it's code is used:
+%%% Uecker, Martin, et al. "ESPIRiT—an eigenvalue approach to autocalibrating parallel MRI:
+%%% where SENSE meets GRAPPA." Magnetic resonance in medicine 71.3 (2014): 990-1001.
+sense_maps = espirit_generator(kspace,acs,[6,6],0.02); 
 
 %%% This part handles the readout concatenation of the k-space and acs
 [RO_acs,slice_R] = readout_conc_prep(kspace,acs);
@@ -41,11 +47,16 @@ parpool(maxNumCompThreads)
 save('recon_images','recon_images')
 
 %% ROCK-SPIRIT Reconstruction with LLR
-[recon_reg,recon_reg_images] = ROCKSPIRIT_reg(data_kspace,sense_maps,kernel_set,kernel_r,kernel_s,slice_R,5,20);
-save('recon_reg_images','recon_reg_images')
+%% Use when input data has dynamics
+%[recon_reg,recon_reg_images] = ROCKSPIRIT_reg(data_kspace,sense_maps,kernel_set,kernel_r,kernel_s,slice_R,5,20);
+%save('recon_reg_images','recon_reg_images')
 
 delete(gcp('nocreate'))
 
 %% Results
 dyn = 1;  %% select a dynamics
+if(exist('recon_reg_images.mat','file')~=0)
 result_plotter(dyn,recon_images,recon_reg_images)
+else
+    result_plotter(dyn,recon_images)
+end
