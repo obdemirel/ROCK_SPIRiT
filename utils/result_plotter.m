@@ -1,4 +1,4 @@
-function [] = result_plotter(dyn,reference_images,recon_images,recon_reg_images)
+function [] = result_plotter(dyn,recon_images,recon_reg_images)
 
 roi_select_x = [174-50:174+50];
 roi_select_y = [89-50:89+50];
@@ -6,6 +6,8 @@ roi_select_y = [89-50:89+50];
 shiftings = [0 45 90];
 
 slices_all = [];
+    
+figure,
 for slice_n = 1:size(recon_images,3)
     
     if(slice_n==1)
@@ -28,8 +30,7 @@ for slice_n = 1:size(recon_images,3)
     
     
     slices_all = [slices_all;ones(1,size(cat(2,rock,ones(size(rock,1),1),reg_rock),2));cat(2,rock,ones(size(rock,1),1),reg_rock)];
-    
-    figure,
+
     imshow(slices_all,[]), ...
         title('ROCK-SPIRiT - Regularized ROCK-SPIRiT'), ylabel('1st Slice -  2nd Slice - 3rd Slice'),...
         xlabel(['Dynamic: ', num2str(dyn)])
