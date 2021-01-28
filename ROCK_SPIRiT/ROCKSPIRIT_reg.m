@@ -33,6 +33,7 @@ for ss= 1:num_images
     [m,n,no_c] = size(input);
     
     %%% sampling points%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% uncomment if you want to let itself find the points
     non_acq_p = ksms==0;
     acq_p = ones(ksb,n,no_c,'single')-non_acq_p;
     non_acq_p = logical(non_acq_p);

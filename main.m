@@ -15,7 +15,7 @@
 %% kspace (RO x PE x NO_C x Dynamics) - R2 undersampled with 24 ACS kept      
 %% acs (RO x PE x NO_C x Slices) with CAIPI shitfs 
 %% sense_maps (RO x PE x NO_C x Slices) with CAIPI shitfs 
-%% reference_images (RO x PE x Slices) with CAIPI shitfs 
+%% reference_images (RO x PE x Slices) with CAIPI shitfs
 
 %% RO:       # of readout lines
 %% PE:       # of phase encode lines
@@ -30,8 +30,8 @@ run setPath
 load cine_data %% File contains kspace,acs,sense_maps and reference_images
 %% reference images are not required
 
-parpool(maxNumCompThreads) %% more is better
-%parpool(4)
+%parpool(maxNumCompThreads) %% more is better
+%parpool(14)
 
 %%% This part handles the readout concatenation of the k-space and acs
 [RO_acs,slice_R] = readout_conc_prep(kspace,acs);
@@ -51,5 +51,4 @@ delete(gcp('nocreate'))
 
 %% Results
 dyn = 1;  %% select a dynamics
-ref_check = exist('reference_images');
 result_plotter(dyn,reference_images,recon_images,recon_reg_images,ref_check)

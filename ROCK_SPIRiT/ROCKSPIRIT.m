@@ -16,6 +16,7 @@ parfor ss=1:size(data_kspace,4)
     ksms = (squeeze(data_kspace(:,:,:,ss)));
     
     %%% sampling points%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% uncomment if you want to let itself find the points
     [m,n,no_c]= size(ksms);
     non_acq_p = ksms==0;
     acq_p = ones(m,n,no_c,'single')-non_acq_p;
