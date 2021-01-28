@@ -16,7 +16,6 @@ Input data:
 - kspace (RO x PE x NO_C x Dynamics)
 - acs (RO x PE x NO_C x Sices) with CAIPI shifts
 - sense_maps (RO x PE x NO_C x Dynamics) with CAIPI shifts
-- reference_images (RO x PE x Slices) with CAIPI shitfs (optional)
 
 Output data:
 
@@ -24,3 +23,6 @@ Output data:
 - recon_reg_images (RO x PE x Slices x Dynamics) % Regularized ROCK-SPIRiT output
 
 
+
+Regularization:
+-Locally low rank (LLR) regularization is supported via ADMM in regularized ROCK-SPIRiTCAIPIRINHA shifts 
