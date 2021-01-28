@@ -19,7 +19,7 @@ Input data:
 
 Input data (shown in image domain):
 
-![kspace](https://user-images.githubusercontent.com/50053603/106170097-bdd68880-6155-11eb-8c43-156e9b4c07df.png)
+![Input](assets/input.png)
 
 Output data:
 - recon_images (RO x PE x Slices x Dynamics) % ROCK-SPIRiT output
