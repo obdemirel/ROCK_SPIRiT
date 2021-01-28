@@ -28,7 +28,7 @@ run setPath
 %% Loading the data
 load cine_data %% File contains kspace,acs,sense_maps
 
-%parpool(maxNumCompThreads) %% more is better
+parpool(maxNumCompThreads)
 
 %%% This part handles the readout concatenation of the k-space and acs
 [RO_acs,slice_R] = readout_conc_prep(kspace,acs);
