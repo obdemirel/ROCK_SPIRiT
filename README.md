@@ -17,13 +17,23 @@ Input data:
 - acs (RO x PE x NO_C x Sices) with CAIPI shifts
 - sense_maps (RO x PE x NO_C x Dynamics) with CAIPI shifts
 
+Input data (shown in image domain):
+
+![kspace](https://user-images.githubusercontent.com/50053603/106170097-bdd68880-6155-11eb-8c43-156e9b4c07df.png)
+
 Output data:
 - recon_images (RO x PE x Slices x Dynamics) % ROCK-SPIRiT output
 - recon_reg_images (RO x PE x Slices x Dynamics) % Regularized ROCK-SPIRiT output
 
+Output data - Resuls (shown in image domain):
+
+![results](https://user-images.githubusercontent.com/50053603/106170489-20c81f80-6156-11eb-98a9-77e90df3c992.png)
+
 Readout concatenation is used to generate extended k-space and calibration region.
 - Input: acquired k-space, acs (CAIPIRINHA shifted)
 - Output: extended k-space, ROCK-SPIRiT kernels, kernel sizes
+
+
 
 ROCK-SPIRiT
 - Input: extended k-space, sensitivity maps, ROCK-SPIRiT kernels, kernel sizes,
