@@ -51,4 +51,4 @@ delete(gcp('nocreate'))
 
 %% Results
 dyn = 1;  %% select a dynamics
-result_plotter(dyn,reference_images,recon_images,recon_reg_images,ref_check)
+result_plotter(dyn,recon_images,recon_reg_images)
