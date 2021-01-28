@@ -37,4 +37,5 @@ Regularized ROCK-SPIRiT
 
 Regularization:
 - Locally low rank (LLR) regularization is supported via ADMM in regularized ROCK-SPIRiT
-- To avoid border artifacts, CAIPIRINHA shifts are re-shifted/shifted before/after the regularization 
+- To avoid border artifacts, CAIPIRINHA shifts are re-shifted/shifted before/after the regularization
+
