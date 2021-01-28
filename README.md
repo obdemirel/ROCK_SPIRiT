@@ -27,7 +27,7 @@ Output data:
 
 Output data - Resuls (shown in image domain):
 
-![results](https://user-images.githubusercontent.com/50053603/106170489-20c81f80-6156-11eb-98a9-77e90df3c992.png)
+![Output](assets/output.png)
 
 Readout concatenation is used to generate extended k-space and calibration region.
 - Input: acquired k-space, acs (CAIPIRINHA shifted)
