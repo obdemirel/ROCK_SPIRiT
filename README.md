@@ -25,6 +25,11 @@ Readout concatenation is used to generate extended k-space and calibration regio
 - Input: acquired k-space, acs (CAIPIRINHA shifted)
 - Output: extended k-space, ROCK-SPIRiT kernels, kernel sizes
 
+[RO_acs,slice_R] = readout_conc_prep(kspace,acs);
+
+![RO ACS](https://imgur.com/EIM5fdf)
+
+
 ROCK-SPIRiT
 - Input: extended k-space, sensitivity maps, ROCK-SPIRiT kernels, kernel sizes,
          slice acceleration, #of CG iterations
