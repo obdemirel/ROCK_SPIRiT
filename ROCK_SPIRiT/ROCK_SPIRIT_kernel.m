@@ -93,13 +93,18 @@ disp('Kernel Calibration is done!')
 clear A B MA Mk
 
 for ss=1:size(kspace,4)
-multi_slice_kspace = kspace(:,:,:,ss);
-small_art_kspace1 = zeros(size(multi_slice_kspace,1)*slice_R,size(multi_slice_kspace,2),size(multi_slice_kspace,3),'single');
-small_art_kspace1(1:slice_R:end,:,:) = multi_slice_kspace;
-data_kspace(ss,:,:,:) = small_art_kspace1;
+    multi_slice_kspace = kspace(:,:,:,ss);
+    small_art_kspace1 = zeros(size(multi_slice_kspace,1)*slice_R,size(multi_slice_kspace,2),size(multi_slice_kspace,3),'single');
+    small_art_kspace1(1:slice_R:end,:,:) = multi_slice_kspace;
+    %% When SMS acceleration is even, 1/SMS*2 shift is need!
+    if(mod(slice_R,2)==0)
+        [small_art_kspace1] = shifter_ro_direc(small_art_kspace1,[1],slice_R*2);
+    end
+    data_kspace(ss,:,:,:) = small_art_kspace1;
 end
 
 data_kspace = permute(data_kspace,[2 3 4 1]);
+
 
 kernel_r = kernel_row;
 kernel_s = kernel_col;
