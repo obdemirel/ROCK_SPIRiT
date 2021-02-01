@@ -17,7 +17,7 @@ num_images = size(data_kspace,4);
 lambda = 1; 
 %%% use these ones for LLR
 rho = 1e-1;
-llr_th_sca = 0.1; % 4.4 and 4.7
+llr_th_sca = 0.075;
 p1 = 8;
 soft_sign = 1; %% zero means hard
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
