@@ -5,9 +5,9 @@
 %% Last Update: 01/28/2021
 %% If you would like to use this code in one of your publications,
 %% please cite the following:
-%% Demirel, O. B., Weingärtner, S., Moeller, S., Akçakaya, M., 
-%% "Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT (ROCK-SPIRiT)",
-%% Magnetic Resonance in Medicine, in press.
+%% Demirel OB, Weingärtner S, Moeller S, Akçakaya M. 
+%% Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT. 
+%% Magn Reson Med. 2021;00:1–13. https://doi.org/10.1002/mrm.28680
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ROCK SPIRiT requires following inputs:
