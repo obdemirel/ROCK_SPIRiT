@@ -5,9 +5,9 @@
 %% Last Update: 01/28/2021
 %% If you would like to use this code in one of your publications,
 %% please cite the following:
-%% Demirel OB, Weingärtner S, Moeller S, Akçakaya M. 
+%% Demirel OB, WeingÃ¤rtner S, Moeller S, AkÃ§akaya M. 
 %% Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT. 
-%% Magn Reson Med. 2021;00:1–13. https://doi.org/10.1002/mrm.28680
+%% Magn Reson Med. 2021;85:3036â€“3048. https://doi.org/10.1002/mrm.28680
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ROCK SPIRiT requires following inputs:
@@ -32,7 +32,7 @@ load cine_data %% File contains kspace,acs,sense_maps
 %parpool(maxNumCompThreads)
 
 %%% This part generates the ESPIRiT maps using the acs data. Following paper and it's code is used:
-%%% Uecker, Martin, et al. "ESPIRiT—an eigenvalue approach to autocalibrating parallel MRI:
+%%% Uecker, Martin, et al. "ESPIRiTâ€”an eigenvalue approach to autocalibrating parallel MRI:
 %%% where SENSE meets GRAPPA." Magnetic resonance in medicine 71.3 (2014): 990-1001.
 sense_maps = espirit_generator(kspace,acs,[6,6],0.02); 
 
