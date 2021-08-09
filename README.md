@@ -1,5 +1,6 @@
 # Readout Concatenated K-Space SPIRiT (ROCK-SPIRIT)
 This is an implementation of ROCK-SPIRIT(Demirel et al 2021).
+© 2021 Regents of the University of Minnesota. Academic and Research Use Only.
 
 Please cite the following:
 
