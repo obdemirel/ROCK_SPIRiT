@@ -8,6 +8,7 @@
 %% Demirel OB, Weingärtner S, Moeller S, Akçakaya M. 
 %% Improved simultaneous multislice cardiac MRI using readout concatenated k-space SPIRiT. 
 %% Magn Reson Med. 2021;85:3036–3048. https://doi.org/10.1002/mrm.28680
+%% © 2021 Regents of the University of Minnesota. Academic and Research Use Only.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% ROCK SPIRiT requires following inputs:
